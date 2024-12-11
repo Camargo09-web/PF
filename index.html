@@ -16,6 +16,7 @@
                 font-family: Arial;
                 padding: 10px;
                 background: white;
+                min-width: 320px;
             }
             
             /*Header/blog title*/
@@ -32,7 +33,7 @@
             /*Style the top navigation bar*/
             .topnav{
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 background-color: black;
             }
@@ -120,16 +121,10 @@
                 text-align: center;
             }
             
-            @media only screen and(max-width: 700px){
-                .producto-container{
-                    width: 90%;
-                }
-            }
-            
-            @media only screen and(max-width: 500px){
-                .producto-container{
-                    width: 100%;
-                    
+            @media only screen and (max-width: 700px) {
+                .producto-container {
+                    flex-direction: column;
+    
                 }
             }
             
@@ -182,6 +177,21 @@
                 line-height: 1.5;
             }
             
+            @media only screen and (max-width: 1024px){
+            about-container{
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-text, .about-image {
+                width: 100%;
+                padding: 10px;
+                
+                }
+            
+            }
+            
+            
            
            
             
@@ -193,7 +203,8 @@
             }
             
             .contacto-contenedor{
-                width: 35%;
+                width: 90%;
+                max-width: 400px;
                 margin: 0 auto;
             }
             
@@ -300,19 +311,15 @@
             
             }
             
-            /*Responsive layout- when the screen is less that 800px wide, make the two columns stack on top of each other instead of next to each other*/
-            @media screen and(max-width: 800px){
-                .leftcolumn{
-                    width: 100%;
-                    padding: 0;
-                }
-            }
             
             /*Responsive layout- when the screen is less that 400px wide, make the navigation links stack on top of each other instead of next to each other*/
-            @media screen and(max-width: 400px){
-                .topnav a {
+            @media screen and (max-width: 600px) {
+                .topnav {
+                    flex-direction: column;
+                }
+                
+                .topnav a{
                     width: 100%;
-                    text-align: center
                 }
             }
             
